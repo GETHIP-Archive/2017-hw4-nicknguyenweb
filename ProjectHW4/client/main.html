@@ -1,0 +1,97 @@
+<head>
+  <title>Profile</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">Profile</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class><a href="/">Home Page</a></li>
+            <li class><a href="/new">New Member? Create a New Profile Here!</a></li>
+            <li class><a href="/example">Example Profile</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+</body>
+
+<template name="home">
+    <div class="container" id="homeContainer">
+      <h1 style="font-size:400%">Welcome to the Home Page!</h1>
+      <h2 style="color:#404040;">Visit the links above to create a new profile.</h2>
+    </div>
+</template>
+
+<template name="profile">
+  <div class="container" id="profileContainer">
+    <center>
+      <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSf2u0RWmYALKJ431XNoTKjzu77ERLBIvXKlOEA-Q3DPo2h2rCB" name="aboutme" width="140" height="140" border="0" class="img-circle">
+      <h3 class="media-heading">{{profile.firstName}} {{profile.lastName}} <small>{{profile.age}}</small></h3>
+      <h4 class="media-heading">Strengths: {{profile.Strength1}} {{profile.Strength2}} {{profile.Strength3}} {{profile.Strength4}} {{profile.Strength5}}</h4>
+    </center>
+      <hr>
+      <center>
+      <p class="text-left"><strong>Bio: </strong><br>
+          {{profile.bio}}
+      </p>
+      <br>
+    </center>
+  </div>
+</template>
+
+<template name="new">
+  <div class="container" id="newContainer">
+      <form id="newProfile">
+        <div class="form-group">
+          <label for="firstName">First Name</label>
+          <input type="text" class="form-control" id="firstName" placeholder="John">
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last Name</label>
+          <input type="text" class="form-control" id="lastName" placeholder="Smith">
+        </div>
+        <div class="form-group">
+          <label for="age">Age</label>
+          <input type="number" class="form-control" id="age" placeholder="18">
+        </div>
+        <div class="form-group">
+          <label for="bio">Bio</label>
+          <input type="text" class="form-control" id="bio" placeholder="I like Meteor.">
+        </div>
+        <div class="form-group">
+          <label for="Strength1">Strength 1</label>
+          <input type="text" class="form-control" id="Strength1" placeholder="Analytical">
+        </div>
+        <div class="form-group">
+          <label for="Strength2">Strength 2</label>
+          <input type="text" class="form-control" id="Strength2" placeholder="Achiever">
+        </div>
+        <div class="form-group">
+          <label for="Strength3">Strength 3</label>
+          <input type="text" class="form-control" id="Strength3" placeholder="Learner">
+        </div>
+        <div class="form-group">
+          <label for="Strength4">Strength 4</label>
+          <input type="text" class="form-control" id="Strength4" placeholder="Relator">
+        </div>
+        <div class="form-group">
+          <label for="Strength5">Strength 5</label>
+          <input type="text" class="form-control" id="Strength5" placeholder="Responsbility">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+  </div>
+</template>
+
+<template name="example">
+  <center>
+    <img src="https://www.campus.mpsomaha.org/campus/personPicture.jsp?personID=292&alt=logo" name="aboutme" width="140" height="140" border="0" class="img-circle">
+    <h3 class="media-heading">Nick Nguyen <small>18</small></h3>
+    <h4 class="media-heading">Strengths: Analytical Achiever Learner Relator Responsibility</h4>
+  </center>
+</template>
